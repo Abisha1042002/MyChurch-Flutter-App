@@ -1,0 +1,44 @@
+{
+  "audio_files": [
+    {
+      "title": "1. Sarvalokathipa",
+      "file": "assets/Aananthame/03.Sarvalokathipa.mp3"
+    },
+    {
+      "title": "2. Engum Pugazh",
+      "file": "assets/Aananthame/04.Engum Pugazh.mp3"
+    },
+    {
+      "title": "3. Nambi Vanthene",
+      "file": "assets/Aananthame/05.Nambi Vanthene.mp3"
+    },
+    {
+      "title": "4. Devane",
+      "file": "assets/Aananthame/06.Devane.mp3"
+    },
+    {
+      "title": "5. Amala",
+      "file": "assets/Aananthame/07.Amala.mp3"
+    },
+    {
+      "title": "6. Theeya Manathai",
+      "file": "assets/Aananthame/08.Theeya Manathai.mp3"
+    },
+    {
+      "title": "7. Dhasare",
+      "file": "assets/Aananthame/09.Dhasare.mp3"
+    },
+    {
+      "title": "8. Yesu Kristhu",
+      "file": "assets/Aananthame/12.Yesu Kristhu.mp3"
+    },
+    {
+      "title": "9. Azhagai Nirkkum",
+      "file": "assets/Aananthame/19.Azhagai Nirkkum.mp3"
+    },
+    {
+      "title": "10. Alleluyah",
+      "file": "assets/Aananthame/22.Alleluyah.mp3"
+    }
+  ]
+}

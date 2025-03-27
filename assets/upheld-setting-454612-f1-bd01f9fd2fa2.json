@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "upheld-setting-454612-f1",
+  "private_key_id": "bd01f9fd2fa24459dddaf6a8a9ce29478f467350",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCw1d61fV+ufEZj\nd04vd3n1SIpVixHSOopq5gLCjgjZF4bX+QpG52yKFTSJZdJcEcvYFC69t2lFAr7M\nVBUTucfb0/Lay0qFNUNB2zLpb/NHXmnQB6VV+VXoKT8s/IOBAFB52dbikVoMZ2nM\nGisqoT0Ogxa5/hqS5c50zKhASipZwHV3gYHrKTPwRzMgXJtEaLm+D6uuYWO3zQKd\nV86f84UL3q7wHYUB+cmdMqtsIXYBcSqg4PnhCQWVlbKsluJHwzIDDllq6+1BdllY\nlZ20aFlO0UwlaWdiOQ8YRdxdPN04+6gznXQc5YnUq/D9bbANOXRdY01MlBVEzBTa\n0JJrKnGTAgMBAAECggEAA8+2IJklk9zqYiJw9TrQ8INlV+RCYyO6ARZ/PpkvgcS+\nLa9c+qzqQSxyOwk5L78XyA8lK0qylZ2pzHBK+EVWabDu+s0P93PWK0Twmy1MqmAP\nXrdpVnakOxnVSWsznIguAKnNT5qwzede1XRozYEVOr5Pf+NJYgGwZgJ3fvXnEArK\nyTKOThWAGLKNwZpW4qVYmn+Bs5qqdgux2krF0gFcU/9gn9ZJwQgFKmOelTo7ViwY\ngHp7yvK48/zBjnl5MYEB854PCHfqgO7DsIZJwVVl0ybm7/FIWlhqdsm64aGwHfYG\na3Ae8zI+XTuPlXcsTEl90vRPqOKxDJFwWaJmvjMwIQKBgQDvt23otB0ROZEjUOpu\nXfCHFUgNlTaWGV/NU1CWL/NQExFuZh9orr1WnCWL+oyZHphWkB8j8aGaRuJHokfZ\nmDhL49lEnBc+hsAP4qxyfVPORgqDJctKisX5grFBcGajuwqZvrfcI0H4NYfXOmuu\n32DmjMBX8A9eYkfqsrXnj/AvxwKBgQC82PbuyWxyfly9VQ8bznTOTsVPVnqPDGt8\nmfK1X2EFv+xcLkR6yYO5LS22wQg4G1mf3Ms18pKktvm/UigkCDbnmn5Nkl44dXfU\nV7u2eNEI4XMinfPkUML4iagFXXxahCBNQtnBUuFK3ashKdYLLzaO8UIqHQXKG+pc\nDi8v8VnH1QKBgHEovNiB1crgyvPJ6bCJ5dZOpIHM80St27yYXM1Y+1nMdokP6jnH\naxeshEjs0FwjxjPuutSD5w5l8cFxCMveAI1KlLC/onVgtN+K2G7/XIVeKO459BpP\nIh+joztJ7RnTXLCxCCgB+M1Lr8FZEaYuSpbq0I1yhD7A1EQlcptKJk7XAoGAXkUE\nR0D/RMw1aUHrr9rIzi/eKPOnbH8rrOCAmu+I1EDxMTbbclvjyG14E3Gas79bZwTl\n4AE+GMFKPKo7ZXlARy8E+54kMJTbA4HkL3tyBbfdLJuiowd5vG2jFUKMj/bC1S6Y\n2vuPgTrUcVKcCatA1ewzNiiUukZjIB7oiUs2oR0CgYBqonXvsRFBAgSOEhqxd6+S\nxmSuLSRfHd71azi+1SpPQJwxzrKuDrt6ygh0gl+Tt6uSHhamNN4PVw+766/4ySxe\nh4L8tLUzNQZt0QwkFENXC+bNof9vMHnmA84kudNSbRv5c0Eu1L1CgcF9ofa8g0tH\nQm/ptcSylZk+KMNw4RX5IQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-church-audio-uploader@upheld-setting-454612-f1.iam.gserviceaccount.com",
+  "client_id": "116365114451516011973",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-church-audio-uploader%40upheld-setting-454612-f1.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
