@@ -182,52 +182,52 @@ class DonationPageState extends State<DonationPage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-            children: [
+          children: [
             Container(
-            color: const Color(0xFFFFE4B5),
-        padding: const EdgeInsets.all(16.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextFormField(
-                controller: _nameController,
-                decoration: const InputDecoration(labelText: "Name", prefixIcon: Icon(Icons.person)),
-                validator: (value) => value!.isEmpty ? "Enter your name" : null,
+              color: const Color(0xFFFFE4B5),
+              padding: const EdgeInsets.all(16.0),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextFormField(
+                      controller: _nameController,
+                      decoration: const InputDecoration(labelText: "Name", prefixIcon: Icon(Icons.person)),
+                      validator: (value) => value!.isEmpty ? "Enter your name" : null,
+                    ),
+                    TextFormField(
+                      controller: _emailController,
+                      decoration: const InputDecoration(labelText: "Email", prefixIcon: Icon(Icons.email)),
+                      validator: (value) => value!.isEmpty ? "Enter your email" : null,
+                    ),
+                    TextFormField(
+                      controller: _phoneController,
+                      decoration: const InputDecoration(labelText: "Phone", prefixIcon: Icon(Icons.phone)),
+                      validator: (value) => value!.isEmpty ? "Enter your phone number" : null,
+                    ),
+                    TextFormField(
+                      controller: _amountController,
+                      decoration: const InputDecoration(labelText: "Amount", prefixIcon: Icon(Icons.money)),
+                      validator: (value) => value!.isEmpty ? "Enter donation amount" : null,
+                    ),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: _startPayment,
+                      child: const Text("Donate Now"),
+                    ),
+                  ],
+                ),
               ),
-              TextFormField(
-                controller: _emailController,
-                decoration: const InputDecoration(labelText: "Email", prefixIcon: Icon(Icons.email)),
-                validator: (value) => value!.isEmpty ? "Enter your email" : null,
-              ),
-              TextFormField(
-                controller: _phoneController,
-                decoration: const InputDecoration(labelText: "Phone", prefixIcon: Icon(Icons.phone)),
-                validator: (value) => value!.isEmpty ? "Enter your phone number" : null,
-              ),
-              TextFormField(
-                controller: _amountController,
-                decoration: const InputDecoration(labelText: "Amount", prefixIcon: Icon(Icons.money)),
-                validator: (value) => value!.isEmpty ? "Enter donation amount" : null,
-              ),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: _startPayment,
-                child: const Text("Donate Now"),
-              ),
-              ],
-          ),
-        ),
             ),
-              SizedBox(height: 300,
-                child: ListView.builder(
-    shrinkWrap: true,
-                  itemCount: transactions.length,
-                  itemBuilder: (context, index) {
-                    final transaction = transactions[index];
-                    return Card(
-                        margin: const EdgeInsets.symmetric(vertical: 8),
+            SizedBox(height: 300,
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: transactions.length,
+                itemBuilder: (context, index) {
+                  final transaction = transactions[index];
+                  return Card(
+                    margin: const EdgeInsets.symmetric(vertical: 8),
                     elevation: 8,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     child: ListTile(
@@ -238,13 +238,13 @@ class DonationPageState extends State<DonationPage> {
                         onPressed: () => _generateProfessionalReceipt(transaction['name'], transaction['email'], transaction['phone'], transaction['amount'], transaction['date'], transaction['transaction_id']),
                       ),
                     ),
-                    );
-                  },
-                ),
+                  );
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      );
+      ),
+    );
   }
 }
