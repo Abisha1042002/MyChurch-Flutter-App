@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:my_church/screens/admin_add_product_page.dart';
 import 'package:my_church/screens/donation_list.dart';
 import 'package:my_church/screens/events_upload.dart';
 import 'package:my_church/screens/gallery_upload.dart';
 import 'package:my_church/screens/marriage_events_upload.dart';
 import 'package:my_church/screens/worship_videos_upload.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_church/screens/adminside_added_products.dart';
 
 class AdminScreen extends StatefulWidget {
   const AdminScreen({super.key});
@@ -105,7 +108,7 @@ class AdminScreenState extends State<AdminScreen> with SingleTickerProviderState
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
           curve: Curves.easeInOut,
-          height: 100,
+          height: 125,
           decoration: BoxDecoration(
             color: item.color,
             borderRadius: BorderRadius.circular(20),
@@ -146,4 +149,6 @@ final List<MenuItem> menuItems = [
   MenuItem(title: 'Gallery', icon: Icons.photo_library, page: const ImageGalleryScreen(), color: Colors.purple.shade400),
   MenuItem(title: 'Worship Videos', icon: Icons.video_library, page: const VideoUploadScreen(), color: Colors.red.shade400),
   MenuItem(title: 'Donation List', icon: Icons.manage_history, page: const DonationHistoryPage(), color: Colors.teal.shade500),
+  MenuItem(title: 'sales page', icon: FontAwesomeIcons.store, page: const AdminAddProductAdvanced(), color: Colors.teal.shade500),
+  MenuItem(title: 'Product List', icon: Icons.store, page: const ProductListPage(), color: Colors.teal.shade500),
 ];

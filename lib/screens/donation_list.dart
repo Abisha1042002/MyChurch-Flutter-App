@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_church/screens/admin_report.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DonationHistoryPage extends StatefulWidget {
@@ -10,7 +11,6 @@ class DonationHistoryPage extends StatefulWidget {
 
 class DonationHistoryPageState extends State<DonationHistoryPage> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,18 @@ class DonationHistoryPageState extends State<DonationHistoryPage> {
             ),
           ],
         ),
-      ),
+                actions: [
+                  IconButton(
+                    icon: const Icon(Icons.analytics, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AdminReportPage(),), // Change to your Bible page
+                      );
+                    },
+                  ),
+                ],
+      ),// Change to your Bible page
       body: StreamBuilder(
         stream: _firestore.collection('donations').orderBy('date', descending: true).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {

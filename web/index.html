@@ -54,7 +54,33 @@
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
   </script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    function openRazorpayCheckout(name, email, phone, amount) {
+      var options = {
+        key: "rzp_test_UNcdjKmpffp4U6", // Replace with your key
+        amount: amount * 100,
+        currency: "INR",
+        name: "My Church",
+        description: "Donation Payment",
+        prefill: {
+          name: name,
+          email: email,
+          contact: phone,
+        },
+        handler: function (response) {
+          window.flutter_inappwebview.callHandler('paymentSuccess', {
+            razorpay_payment_id: response.razorpay_payment_id
+          });
+        },
+        theme: {
+          color: "#3399cc"
+        }
+      };
 
-
+      var rzp1 = new Razorpay(options);
+      rzp1.open();
+    }
+  </script>
 </body>
 </html>

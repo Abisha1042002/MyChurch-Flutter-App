@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:shimmer/shimmer.dart';
 import 'main_screen.dart';
+import 'package:my_church/screens/login_selection.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:my_church/screens/user_login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,6 +23,7 @@ class SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
+    _checkLoginStatus();
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
@@ -42,7 +46,7 @@ class SplashScreenState extends State<SplashScreen>
       end: Colors.orange.shade100,
     ).animate(_animationController);
 
-    _navigateToHome();
+
   }
 
   @override
@@ -51,12 +55,32 @@ class SplashScreenState extends State<SplashScreen>
     super.dispose();
   }
 
-  Future<void> _navigateToHome() async {
-    await Future.delayed(const Duration(seconds: 3));
-    if (mounted) {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const MainScreen()));
-    }
+  //Future<void> _navigateToHome() async {
+    //await Future.delayed(const Duration(seconds: 3));
+    //if (mounted) {
+      //Navigator.pushReplacement(
+          //context, MaterialPageRoute(builder: (context) => const MainLoginPage()));
+    //}
+  //}
+
+  void _checkLoginStatus() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool isLoggedIn = prefs.getBool("isLoggedIn") ?? false;
+
+    // wait 2 seconds to show splash screen
+    Timer(const Duration(seconds: 2), () {
+      if (isLoggedIn) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const MainScreen()),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const MainLoginPage()),
+        );
+      }
+    });
   }
 
   @override

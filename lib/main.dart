@@ -3,6 +3,8 @@ import 'screens/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter/foundation.dart'; // ✅ Fix for kIsWeb
+import 'package:my_church/screens/cart_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,7 +12,9 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (_) => CartProvider(),
+      child: const MyApp(),),);
 }
 
 class MyApp extends StatelessWidget {
@@ -21,8 +25,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My Church',
+      themeMode: ThemeMode.system,
       theme: ThemeData(
-        textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.0),
+        textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.0, bodyColor: Colors.black,
+          displayColor: Colors.black,),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
